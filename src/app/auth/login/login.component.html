@@ -1,0 +1,30 @@
+<div class="wrapper">
+
+
+    <div class="login-container">
+        <img class="logo" src="../../../assets/img/logo.png" alt="">
+        <h1>Iniciar Sesion</h1>
+        <form class="login-form" [formGroup]="form" (ngSubmit)="submit()">
+
+            <p>
+                <mat-form-field appearance="fill" [style.width.px]=400>
+                    <mat-label>Correo</mat-label>
+                    <input type="text" matInput formControlName="email">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="fill" [style.width.px]=400>
+                    <mat-label>Contraseña</mat-label>
+                    <input id='password' type="password" matInput formControlName="password">
+                </mat-form-field>
+            </p>
+            <button color="primary" type="submit" mat-flat-button>Iniciar Sesion</button>
+
+        </form>
+        <div class="soporte">
+            <h3>No estas registrado ?</h3>
+            <p>Significa que no eres un administrador! No puedes registrarte.. <br>Por favor abandona la pagina, puedes
+                registrarte como cliente en <a href="">TodoIT</a></p>
+        </div>
+    </div>
+</div>

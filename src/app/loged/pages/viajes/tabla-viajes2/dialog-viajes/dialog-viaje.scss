@@ -1,0 +1,21 @@
+.form-container {
+  display: grid;
+  justify-items: center;
+}
+.cadete {
+  margin-left: 25px;
+}
+.title {
+  padding-bottom: 20px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

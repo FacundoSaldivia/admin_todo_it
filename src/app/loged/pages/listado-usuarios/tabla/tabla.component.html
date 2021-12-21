@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Nombre y apellido </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="rol">
+        <th mat-header-cell *matHeaderCellDef> Rol </th>
+        <td mat-cell *matCellDef="let element"> {{getUserName(element.rol)}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Direccion </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Telefono </th>
+        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="vehiculo">
+        <th mat-header-cell *matHeaderCellDef> Vehiculo </th>
+        <td mat-cell *matCellDef="let element"> {{element.vehiculo}} </td>
+    </ng-container>
+    <ng-container matColumnDef="editar">
+        <th mat-header-cell *matHeaderCellDef> Editar </th>
+        <td mat-cell *matCellDef="let element"> <button (click)='identificarUser(element)' class="edit-button">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+            </button> </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5]" aria-label="Select page of users"></mat-paginator>

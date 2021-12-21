@@ -1,0 +1,15 @@
+.wrapper {
+  text-align: center;
+  .texto {
+    margin: 20px;
+    font-size: 120%;
+  }
+  .texto:first-child {
+    font-weight: bold;
+    font-size: 150%;
+    padding-bottom: 20px;
+  }
+  .texto:last-child {
+    padding-bottom: 20px;
+  }
+}

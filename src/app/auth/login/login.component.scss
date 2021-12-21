@@ -1,0 +1,58 @@
+.wrapper {
+  background-image: url("../../../assets/img/bg-login2.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-size: 100vw 100vh;
+}
+
+.login-container {
+  background-color: #f3f3f3;
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+    padding-bottom: 40px;
+  }
+  .logo {
+    width: 8%;
+    position: absolute;
+    top: 10%;
+  }
+  .soporte {
+    width: 25vw;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    h3 {
+      font-size: 150%;
+      color: rgba(255, 92, 92, 0.897);
+      padding: 0;
+      margin: 0;
+    }
+    p {
+      color: rgb(149, 149, 149);
+    }
+  }
+  box-shadow: 12px 0 15px -4px rgba(102, 102, 102, 0.192),
+    -12px 0 8px -4px rgba(104, 104, 104, 0.8);
+}
+
+.login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+  width: 500px;
+  button {
+    width: 40%;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border-radius: 5px;
+}

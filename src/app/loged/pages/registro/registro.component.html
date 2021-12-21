@@ -1,0 +1,66 @@
+<h1 class="title">Formulario de Registro </h1>
+<mat-card class="register-container">
+    <mat-card-content>
+        <form class="form-container" [formGroup]="form" (ngSubmit)="submit()">
+            <p>
+                <mat-form-field class="select-container" appearance="fill">
+                    <mat-label>Selecciona un tipo de usuario</mat-label>
+                    <mat-select [(value)]="selected" formControlName="tipoUsuario" required>
+                        <mat-option value="cliente">Cliente</mat-option>
+                        <mat-option value="cadete">Cadete</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Nombre y Apellido</mat-label>
+                    <input type="text" matInput formControlName="fullName" required>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Email</mat-label>
+                    <input type="email" name="email" [email]="true" matInput formControlName="email" required>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Contraseña</mat-label>
+                    <input type="text" matInput formControlName="password" required>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Direccion</mat-label>
+                    <input type="text" matInput formControlName="address" required>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="input">
+                    <mat-label>Telefono</mat-label>
+                    <input type="text" matInput formControlName="cellphone" required>
+                </mat-form-field>
+            </p>
+            <p *ngIf='selected == "cadete"'>
+                <mat-form-field appearance="fill">
+                    <mat-label>Select an option</mat-label>
+                    <mat-select [(value)]="selected2" formControlName="automovil">
+                        <mat-option value="moto">Moto</mat-option>
+                        <mat-option value="bici">Bicicleta</mat-option>
+                        <mat-option value="auto">Automovil</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <p class="text-area">
+                <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label>Observaciones</mat-label>
+                    <textarea matInput formControlName="observaciones"></textarea>
+                </mat-form-field>
+            </p>
+            <p><button id="submit-form" [style.width.px]=250 color='accent' type="submit" [disabled]="!form.valid"
+                    mat-flat-button>Solicitar</button></p>
+
+        </form>
+    </mat-card-content>
+</mat-card>
+<app-info [data]='dataInfo'></app-info>

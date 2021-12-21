@@ -1,0 +1,54 @@
+<form class="form-container" [formGroup]="form" (ngSubmit)="submit()">
+    <h1 class="title">Modificar Viaje</h1>
+    <p>
+        <mat-form-field class="select-container" appearance="fill">
+            <mat-label>StatusTravel:{{selected}}</mat-label>
+            <mat-select [(value)]="selected" formControlName="estadoEnvio">
+                <mat-option value=1>Pendiente de Retiro</mat-option>
+                <mat-option value=2>Retiro Asignado</mat-option>
+                <mat-option value=3>Retiro en curso</mat-option>
+                <mat-option value=4>Pendiente de reparacion</mat-option>
+                <mat-option value=5>Reparado - Entrega pendiente</mat-option>
+                <mat-option value=6>Entrega asignada</mat-option>
+                <mat-option value=7>Entrega en curso</mat-option>
+                <mat-option value=8>Entregado</mat-option>
+                <mat-option value=9>Recibido</mat-option>
+                <mat-option value=10>Renunciado</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </p>
+    <p>
+        <mat-form-field class="select-container" appearance="fill">
+            <mat-label>Seleccione cadete</mat-label>
+            <mat-select value=0 formControlName="cadeteId">
+
+                <mat-option *ngFor='let cadete of cadetes' [value]=cadete.id>{{cadete.name}}</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+
+    </p>
+    <p>
+        <mat-form-field class="" appearance="fill">
+            <mat-label>Observaciones</mat-label>
+            <textarea formControlName="observaciones" matInput placeholder="Observaciones"></textarea>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="select-container" appearance="fill">
+            <mat-label>Resignado:{{selected2}}</mat-label>
+            <mat-select [(value)]="selected2" formControlName="resigned">
+                <mat-option [value]='true'>true</mat-option>
+                <mat-option [value]='false'>false</mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+    </p>
+
+    <p><button id="submit-form" [style.width.px]=250 color='accent' type="submit" [disabled]="!form.valid"
+            mat-flat-button>Solicitar</button></p>
+
+</form>

@@ -1,0 +1,25 @@
+table {
+  width: 100%;
+}
+.table-container {
+  padding-top: 20px;
+  width: 60vw;
+  height: 100%;
+  background: white;
+  border-radius: 15px;
+}
+.tabla {
+  padding-bottom: 10px;
+}
+.filter {
+  width: 40vw;
+  margin-left: 1vw;
+}
+.select-container {
+  width: 12vw;
+  margin-left: 5vw;
+  background: none;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.5em 0 !important;
+}

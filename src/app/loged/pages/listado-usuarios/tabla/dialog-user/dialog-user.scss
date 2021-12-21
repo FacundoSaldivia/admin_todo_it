@@ -1,0 +1,8 @@
+.form-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  p:last-child {
+    grid-column: span 2;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <mat-card>
+        <mat-card-title style="text-align: center;">Equipos tomados en los ultimos 7 dias</mat-card-title>
+        <p class='etiqueta'>Equipos</p>
+        <div class="chartLine">
+            <canvas id='myChart' #lineChart>{{ chart }}</canvas>
+        </div>
+
+    </mat-card>
+    <mat-card>
+        <mat-card-title style="text-align: center;">Viajes hoy</mat-card-title>
+        <div class="chartBar">
+            <canvas id='myChart2' #barChart>{{ chart }}</canvas>
+        </div>
+    </mat-card>
+    <mat-card>
+        <mat-card-title>Cantidad de usuarios registrados</mat-card-title>
+        <div class="chart" style="display: block ">
+            <canvas #dChart>{{ chart }}</canvas>
+        </div>
+    </mat-card>
+</div>

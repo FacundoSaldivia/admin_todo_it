@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+        <img class="logo" src="../../../../assets/img/logo.png" alt="">
+        <div class="links">
+            <h1 style="text-align: center; color:rgb(153, 153, 153)">Dashboard</h1>
+            <hr style="width:90%; opacity: .3;">
+            <a [routerLinkActive]="['is-active']" [routerLink]="['/dash/overview']">Overview</a>
+            <a [routerLinkActive]="['is-active']" [routerLink]="['/dash/registro']">Registro</a>
+            <a [routerLinkActive]="['is-active']" [routerLink]="['/dash/viajes']">Viajes</a>
+            <a [routerLinkActive]="['is-active']" [routerLink]="['/dash/historial-viajes']">Historial</a>
+            <a [routerLinkActive]="['is-active']" [routerLink]="['/dash/listado']">Usuarios</a>
+            <a (click)='cerrarSesion()'> Cerrar Sesion</a>
+
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <router-outlet></router-outlet>
+        <button class="toggle-button" type="button" mat-button (click)="drawer.toggle()">
+            <img style="width: 50px;" src="../../../../assets/img/menu.png" alt="">
+        </button>
+    </div>
+</mat-drawer-container>
