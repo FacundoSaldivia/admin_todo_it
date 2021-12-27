@@ -46,6 +46,12 @@ export class LoginComponent implements OnInit {
         }
       );
   }
+
+  logintButton(): void {
+    this.form.value.email = 'administrador@gmail.com';
+    this.form.value.password = '123456';
+    this.login();
+  }
   openSnackBar(message: string, color: string) {
     this._snackBar.open(message, 'Ok', {
       duration: 2000,

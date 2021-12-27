@@ -50,7 +50,6 @@ export class TablaComponent implements OnInit, AfterViewInit {
     let id = user.id;
     this.allUsersData.forEach((e: Usuario) => {
       if (e.id == id) {
-        console.log(e);
         this.openDialog(e);
       }
     });
@@ -127,11 +126,9 @@ export class DialogUser implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
-    console.log(this.data);
   }
   ngOnInit(): void {}
   submit(): void {
-    console.log(this.constructUser());
     this.modifyUser(this.constructUser());
     this.openSnackBar();
     this.dialogRef.close({ data: this.data });
@@ -140,7 +137,6 @@ export class DialogUser implements OnInit {
   constructUser(): Usuario {
     let userAux: Usuario;
     if (this.form.value.tipoUsuario == 2) {
-      console.log(this.form.value.automovil);
       userAux = {
         id: this.data.id,
         fullName: this.form.value.fullName,
